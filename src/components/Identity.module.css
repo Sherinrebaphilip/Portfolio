@@ -1,0 +1,99 @@
+.identitySection {
+  background-color: var(--bg-color);
+  padding: 15vh 0;
+  position: relative;
+  z-index: 10;
+}
+
+.splitContainer {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+.leftColumn {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.progressTrack {
+  width: 2px;
+  height: 100%;
+  background: var(--glass-border);
+  position: relative;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--text-primary);
+  box-shadow: 0 0 15px var(--text-primary);
+  border-radius: 2px;
+}
+
+.rightColumn {
+  width: 85%;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textContent {
+  max-width: 900px;
+}
+
+.paragraph {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.paragraph:last-child {
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .splitContainer {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .leftColumn {
+    width: 100%;
+    height: 2px;
+    margin-bottom: 4rem;
+    justify-content: flex-start;
+  }
+
+  .progressTrack {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  .progressBar {
+    transform-origin: left !important;
+    height: 2px;
+  }
+
+  .rightColumn {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .paragraph {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
