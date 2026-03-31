@@ -150,3 +150,9 @@
     bottom: 15%;
   }
 }
+
+@media (max-width: 683px) {
+  .scrollContainer {
+    height: 200vh;
+  }
+}
