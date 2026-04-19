@@ -140,6 +140,7 @@
 @media (max-width: 683px) {
   .identitySection {
     padding: 2vh 0 10vh 0;
+    overflow: hidden;
   }
   .gridContainer {
     gap: 1.5rem;
